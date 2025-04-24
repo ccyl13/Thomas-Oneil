@@ -39,7 +39,6 @@ header {
 .content {
     padding: 50px 0;
     text-align: center;
-    flex-grow: 1; /* Asegura que el contenido crezca y ocupe el espacio disponible */
 }
 
 /* Estilo de los encabezados y texto */
@@ -104,11 +103,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Cambio de position: fixed a relative */
+    position: relative;
     width: 100%;
     padding: 12px 0;
     text-align: center;
-    margin-top: auto; /* Asegura que el footer se mantenga en la parte inferior */
+    margin-top: auto;
 }
 
 .footer-content {
@@ -145,17 +144,6 @@ footer {
     color: #ccc;
 }
 
-/* Estilo para el footer en tema claro */
-body.light-theme footer {
-    background-color: #fff;
-    color: #333; /* Color del texto en el footer cuando el tema es claro */
-}
-
-body.light-theme .footer-icon i,
-body.light-theme .footer-link {
-    color: #333; /* Cambio de color de los iconos y los enlaces en el footer */
-}
-
 /* Contenedor */
 .container {
     width: 80%;
@@ -177,4 +165,3 @@ body.light-theme .footer-link {
     height: 315px;
     border-radius: 10px;
 }
-
