@@ -1,0 +1,180 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tema oscuro */
+body.dark-theme {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Tema claro */
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Sección de contenido */
+.content {
+    padding: 50px 0;
+    text-align: center;
+    flex-grow: 1; /* Asegura que el contenido crezca y ocupe el espacio disponible */
+}
+
+/* Estilo de los encabezados y texto */
+h1, h2, h3 {
+    color: #f39c12;
+}
+
+/* Estilo para el contenido en el modo claro */
+body.light-theme header,
+body.light-theme .content {
+    background-color: #fff;
+    color: #333;
+}
+
+body.light-theme .cta-button {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+body.light-theme .cta-button:hover {
+    background-color: #e67e22;
+}
+
+/* Botón para cambiar tema */
+.theme-toggle button {
+    background-color: transparent;
+    border: none;
+    color: #f39c12;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+/* Estilo para el icono */
+.theme-toggle button:hover {
+    color: #e67e22;
+}
+
+/* Botón CTA */
+.cta-button {
+    background-color: #f39c12; /* Naranja brillante */
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover */
+.cta-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: transparent;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Cambio de position: fixed a relative */
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    margin-top: auto; /* Asegura que el footer se mantenga en la parte inferior */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-icon i {
+    font-size: 1.8em;
+    color: #fff;
+}
+
+.footer-icon:hover i {
+    color: #ccc;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #ccc;
+}
+
+/* Estilo para el footer en tema claro */
+body.light-theme footer {
+    background-color: #fff;
+    color: #333; /* Color del texto en el footer cuando el tema es claro */
+}
+
+body.light-theme .footer-icon i,
+body.light-theme .footer-link {
+    color: #333; /* Cambio de color de los iconos y los enlaces en el footer */
+}
+
+/* Contenedor */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Video container */
+.video-container {
+    margin: 30px auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 10px;
+}
+
