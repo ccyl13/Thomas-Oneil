@@ -1,108 +1,144 @@
 body {
   margin: 0;
-  font-family: 'Fira Code', monospace;
-  background: #0d0d0d;
-  color: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
 }
 
-h1, h2, h3 {
-  color: #f0db4f;
-  margin-bottom: 1rem;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .slider img {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
   top: 0;
   left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
 }
 
 .slider img.active {
-  opacity: 0.3;
+  opacity: 1;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
-  padding: 2rem;
+  z-index: 3;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 2rem;
 }
 
 .hero-content h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
+  color: #f0db4f;
 }
 
 .hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  color: #eee;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
 }
 
 .cta-button {
   background-color: #f0db4f;
-  color: #0d0d0d;
+  color: #000;
+  padding: 0.9rem 2rem;
   border: none;
-  padding: 0.85rem 2rem;
   font-weight: bold;
+  border-radius: 5px;
   font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .cta-button:hover {
-  transform: scale(1.05);
+  background-color: #ffd700;
 }
 
-section {
-  padding: 4rem 2rem;
+/* Historia */
+.story {
   max-width: 900px;
-  margin: auto;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.story h2 {
+  color: #f0db4f;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .story p {
+  font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
   font-style: italic;
 }
 
-.story em strong {
-  font-style: italic;
-  font-weight: bold;
-}
-
-.form-section {
+/* Contadores */
+.impact-section {
+  background: #111111;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
-.form-title {
-  font-size: 1.8rem;
+.impact-title {
   color: #f0db4f;
+  font-size: 2rem;
   margin-bottom: 2rem;
-  margin-top: 4rem;
 }
 
-.ml-wrapper {
+.counters {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
+.counter-box {
+  flex: 1 1 200px;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.counter-box span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f0db4f;
+  display: block;
+}
+
+.counter-box p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Video */
 .video-section {
   background: linear-gradient(to bottom, #0d0d0d, #111111);
   padding: 4rem 2rem;
@@ -123,28 +159,40 @@ section {
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
-footer {
+/* Formulario */
+.form-section {
+  background: #1b1b1b;
   text-align: center;
-  padding: 2rem;
-  background-color: #111;
-  color: #aaa;
-  font-size: 0.9rem;
+  padding: 4rem 2rem;
+}
+
+.form-section h2 {
+  font-size: 2rem;
+  color: #f0db4f;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #ccc;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
 .footer-icons {
-  margin: 1rem 0;
+  margin-top: 1rem;
 }
 
-.footer-icon {
+.footer-icons a {
   color: #f0db4f;
-  margin: 0 0.5rem;
   font-size: 1.5rem;
-  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: 0.3s ease;
 }
 
-.footer-link {
-  color: #f0db4f;
-  text-decoration: none;
+.footer-icons a:hover {
+  color: #fff;
 }
 
 /* Responsive */
@@ -158,23 +206,11 @@ footer {
   }
 
   .cta-button {
-    width: 100%;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
   }
 
   .video-container iframe {
     height: 250px;
-  }
-
-  section {
-    padding: 2rem 1rem;
-  }
-
-  .form-title {
-    font-size: 1.5rem;
-  }
-
-  .video-title {
-    font-size: 1.5rem;
   }
 }
