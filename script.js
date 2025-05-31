@@ -1,4 +1,3 @@
-// script.js - Slider automático con fade
 let current = 0;
 const slides = document.querySelectorAll(".slider img");
 
