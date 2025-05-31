@@ -1,27 +1,23 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0a0a0a;
-  color: #f2f2f2;
+  font-family: 'Fira Code', monospace;
+  background: #0d0d0d;
+  color: #f5f5f5;
 }
 
-h1, h2 {
-  color: #ffffff;
-}
-
-a {
-  color: #f2f2f2;
-  text-decoration: none;
+h1, h2, h3 {
+  color: #f0db4f;
+  margin-bottom: 1rem;
 }
 
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .slider img {
@@ -31,10 +27,12 @@ a {
   object-fit: cover;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  top: 0;
+  left: 0;
 }
 
 .slider img.active {
-  opacity: 0.3;
+  opacity: 0.35;
 }
 
 .hero-content {
@@ -44,44 +42,53 @@ a {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #dcdcdc;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #eee;
 }
 
 .cta-button {
-  background: #ffffff;
-  color: #0a0a0a;
-  padding: 0.8rem 1.6rem;
-  font-weight: bold;
+  background-color: #f0db4f;
+  color: #0d0d0d;
   border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .cta-button:hover {
-  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.story p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
 }
 
 .video-container iframe {
   width: 100%;
-  max-width: 800px;
-  height: 450px;
+  height: 400px;
   border: none;
-  margin: 2rem auto;
-  display: block;
 }
 
 footer {
   text-align: center;
   padding: 2rem;
   background-color: #111;
+  color: #aaa;
   font-size: 0.9rem;
 }
 
@@ -90,7 +97,51 @@ footer {
 }
 
 .footer-icon {
-  color: #ffffff;
+  color: #f0db4f;
   margin: 0 0.5rem;
   font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.footer-link {
+  color: #f0db4f;
+  text-decoration: none;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* 🔥 OPTIMIZACIÓN RESPONSIVE 🔥 */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .video-container iframe {
+    height: 250px;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .story h2 {
+    font-size: 1.5rem;
+  }
+
+  .story p {
+    font-size: 1rem;
+  }
 }
