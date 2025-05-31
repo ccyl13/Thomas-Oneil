@@ -1,3 +1,4 @@
+/* General */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -10,6 +11,7 @@ a {
   color: inherit;
 }
 
+/* Hero */
 .hero {
   position: relative;
   height: 100vh;
@@ -98,46 +100,6 @@ a {
   font-style: italic;
 }
 
-/* Contadores */
-.impact-section {
-  background: #111111;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.impact-title {
-  color: #f0db4f;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.counters {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.counter-box {
-  flex: 1 1 200px;
-  background: #1a1a1a;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-}
-
-.counter-box span {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #f0db4f;
-  display: block;
-}
-
-.counter-box p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-}
-
 /* Video */
 .video-section {
   background: linear-gradient(to bottom, #0d0d0d, #111111);
@@ -193,6 +155,13 @@ footer {
 
 .footer-icons a:hover {
   color: #fff;
+}
+
+.footer-link {
+  display: block;
+  margin-top: 1rem;
+  color: #f0db4f;
+  font-size: 0.9rem;
 }
 
 /* Responsive */
