@@ -1,167 +1,132 @@
-/* Reset de estilos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo general */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  background: #0d0d0d;
+  color: #f5f5f5;
 }
 
-/* Tema oscuro */
-body.dark-theme {
-    background-color: #121212;
-    color: #fff;
-}
-
-/* Tema claro */
-body.light-theme {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header */
-header {
-    background-color: #1e1e1e;
-    color: #fff;
-    padding: 50px 0;
-    text-align: center;
-}
-
-/* Sección de contenido */
-.content {
-    padding: 50px 0;
-    text-align: center;
-}
-
-/* Estilo de los encabezados y texto */
 h1, h2, h3 {
-    color: #f39c12;
+  color: #f0db4f;
+  margin-bottom: 1rem;
 }
 
-/* Estilo para el contenido en el modo claro */
-body.light-theme header,
-body.light-theme .content {
-    background-color: #fff;
-    color: #333;
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-body.light-theme .cta-button {
-    background-color: #f39c12;
-    color: #fff;
+.slider img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  top: 0;
+  left: 0;
 }
 
-body.light-theme .cta-button:hover {
-    background-color: #e67e22;
+.slider img.active {
+  opacity: 0.35;
 }
 
-/* Botón para cambiar tema */
-.theme-toggle button {
-    background-color: transparent;
-    border: none;
-    color: #f39c12;
-    font-size: 24px;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  padding: 2rem;
 }
 
-/* Estilo para el icono */
-.theme-toggle button:hover {
-    color: #e67e22;
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
 }
 
-/* Botón CTA */
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #eee;
+}
+
 .cta-button {
-    background-color: #f39c12; /* Naranja brillante */
-    color: #fff;
-    padding: 15px 25px;
-    font-size: 1.25rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #f0db4f;
+  color: #0d0d0d;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* Efecto hover */
 .cta-button:hover {
-    background-color: #e67e22;
-    transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/* Footer */
-footer {
-    background: transparent;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    padding: 12px 0;
-    text-align: center;
-    margin-top: auto;
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
+.story p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
 }
 
-.footer-content p {
-    margin: 0;
+.newsletter-benefits ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.footer-icons {
-    display: flex;
-    gap: 12px;
-}
-
-.footer-icon i {
-    font-size: 1.8em;
-    color: #fff;
-}
-
-.footer-icon:hover i {
-    color: #ccc;
-}
-
-.footer-link {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-link:hover {
-    color: #ccc;
-}
-
-/* Contenedor */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-/* Video container */
-.video-container {
-    margin: 30px auto;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
+.newsletter-benefits li {
+  margin-bottom: 0.75rem;
 }
 
 .video-container iframe {
-    width: 100%;
-    max-width: 560px;
-    height: 315px;
-    border-radius: 10px;
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.footer-icons {
+  margin: 1rem 0;
+}
+
+.footer-icon {
+  color: #f0db4f;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.footer-link {
+  color: #f0db4f;
+  text-decoration: none;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+a.cta-button {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
 }
